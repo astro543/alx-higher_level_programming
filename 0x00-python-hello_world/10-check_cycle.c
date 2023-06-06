@@ -1,28 +1,25 @@
 #include "lists.h"
-
 /**
- * check_cycle - function that checks if a linked list has a cycle
- * @list: linked list to be checked
- * Return: 1 if has a cycle, 0 otherwise
+ * check_cycle - it checks if a linked list is circular or not
+ *
+ * @list: Linked list to check
+ *
+ * Return: 1 (linked list is circular) 0 (no loop detected)
  */
-
 int check_cycle(listint_t *list)
 {
-	listint_t *tmp = list;
-	listint_t *tmp2 = list;
+	listint_t *slow = NULL, *fast = NULL;
 
-	if (!list)
+	slow = fast = list;
+	while (list && slow && fast && slow->next && fast->next)
 	{
-		return (0);
+		slow = slow->next;
+		fast = fast->next->next;
+		if (!fast || !slow)
+			return (0);
+		if (fast->next == slow)
+			return (1); /* loop found */
 	}
-	while (tmp && tmp2 && tmp2->next)
-	{
-		tmp = tmp->next;
-		tmp2 = tmp2->next->next;
-		if (tmp == tmp2)
-		{
-			return (1);
-		}
-	}
+	/* no loop detected */
 	return (0);
 }
