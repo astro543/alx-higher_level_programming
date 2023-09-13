@@ -1,0 +1,1 @@
+creating javascript basic codes
