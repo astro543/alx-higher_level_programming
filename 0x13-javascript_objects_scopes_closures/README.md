@@ -1,0 +1,1 @@
+This is the creation and study of scopes objects and closer in javascript
