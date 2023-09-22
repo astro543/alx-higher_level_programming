@@ -4,6 +4,6 @@
  * Rectangle is being represeted
  */
 
-class rectangle {}
+class Rectangle {}
 
 module.exports = Rectangle;
