@@ -1,5 +1,4 @@
-#!usr/bin/node
-
+#!/usr/bin/node
 /**
  * Rectangle is being represeted
  */
