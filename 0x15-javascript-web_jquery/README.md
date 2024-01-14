@@ -1,0 +1,1 @@
+This is a web query using JavaScript
